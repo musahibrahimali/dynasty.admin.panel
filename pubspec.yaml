@@ -68,9 +68,6 @@ flutter_icons:
   image_path_ios: "assets/images/core/icon.png"
   android: true
   ios: true
-  windows: true
-  macos: true
-  linux: true
   remove_alpha_ios: true
   adaptive_icon_background: "#000000"
 
@@ -79,9 +76,6 @@ flutter_native_splash:
   background_image_dark: "assets/images/welcome/splash_dark.png"
   android: true
   ios: true
-  windows: true
-  macos: true
-  linux: true
   android_gravity: fill
   ios_content_mode: scaleAspectFill
 
