@@ -4,18 +4,22 @@ import 'package:flutter/material.dart';
 // const double _kSmallScreenBreakpoint = 360.0;
 const double _kMediumScreenBreakpoint = 768.0;
 const double _kLargeScreenBreakpoint = 1366.0;
+// custom screen sizes
+const double _kCustomScreenBreakpoint = 1100.0;
 
 class ResponsiveWidget extends StatelessWidget {
   // the widget that will be shown based on the size of the screen
   final Widget largeScreen;
   final Widget? mediumScreen;
   final Widget? smallScreen;
+  final Widget? customScreen;
 
   const ResponsiveWidget({
     Key? key,
     required this.largeScreen,
     this.mediumScreen,
     this.smallScreen,
+    this.customScreen,
   }) : super(key: key);
 
   // check the size of the screen and return the widget that should be shown
@@ -33,6 +37,11 @@ class ResponsiveWidget extends StatelessWidget {
   // check if the screen is large
   static bool isLargeScreen(BuildContext context) {
     return MediaQuery.of(context).size.width >= _kLargeScreenBreakpoint;
+  }
+
+  static bool isCustomSize(BuildContext context) {
+    return MediaQuery.of(context).size.width <= _kCustomScreenBreakpoint &&
+        MediaQuery.of(context).size.width >= _kMediumScreenBreakpoint;
   }
 
   @override

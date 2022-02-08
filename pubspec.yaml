@@ -44,6 +44,7 @@ dependencies:
   # Utils
   intl: ^0.17.0
   auto_size_text: ^3.0.0
+  badges: ^2.0.2
 
   # Widgets
   qr_flutter: ^4.0.0

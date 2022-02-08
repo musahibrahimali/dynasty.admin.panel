@@ -7,6 +7,9 @@ void main() async {
   // ensure all widgets and bindings are created
   WidgetsFlutterBinding.ensureInitialized();
 
+  // set the app's controller instances
+  Get.put(MenuController());
+
   // run the app
   runApp(
     const DynastyUrbanStyle(), // the custom stateless widget
