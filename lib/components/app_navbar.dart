@@ -25,9 +25,9 @@ class NavBar extends StatelessWidget {
         boxShadow: const [
           BoxShadow(
             color: Colors.black12,
-            blurRadius: 6.0,
-            spreadRadius: 2.4,
-            offset: Offset(5.0, 0.5),
+            blurRadius: 3.0,
+            spreadRadius: 1.0,
+            offset: Offset(4.0, 0.5),
           ),
         ],
       ),
@@ -78,10 +78,11 @@ class NavBar extends StatelessWidget {
                     const SizedBox(width: 8.0),
                     Text(
                       "Dynasty",
-                      style: GoogleFonts.badScript(
+                      style: GoogleFonts.montserrat(
                         fontSize: 18.0,
                         fontWeight: FontWeight.w900,
-                        color: BrandColors.kDarkGray,
+                        color: BrandColors.kColorDarkBlue,
+                        letterSpacing: 2.5,
                       ),
                     ),
                   ],
@@ -95,7 +96,7 @@ class NavBar extends StatelessWidget {
                 onPressed: () {},
                 icon: Icon(
                   Icons.settings_outlined,
-                  color: BrandColors.kBlue,
+                  color: BrandColors.kColorDarkBlue,
                 ),
               ),
               Badge(
@@ -114,7 +115,7 @@ class NavBar extends StatelessWidget {
                   onPressed: () {},
                   icon: Icon(
                     Icons.notifications_none,
-                    color: BrandColors.kBlue,
+                    color: BrandColors.kColorDarkBlue,
                   ),
                 ),
               ),
@@ -130,7 +131,7 @@ class NavBar extends StatelessWidget {
                 style: GoogleFonts.nunito(
                   fontSize: 18.0,
                   fontWeight: FontWeight.w700,
-                  color: BrandColors.kDarkGray,
+                  color: BrandColors.kColorBlue,
                 ),
               ),
               Container(
@@ -140,7 +141,7 @@ class NavBar extends StatelessWidget {
                   backgroundColor: BrandColors.kGrayWhite,
                   child: Icon(
                     Icons.person_outline,
-                    color: BrandColors.kBlue,
+                    color: BrandColors.kColorDarkBlue,
                   ),
                 ),
               ),

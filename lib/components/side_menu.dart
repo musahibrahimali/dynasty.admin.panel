@@ -8,7 +8,7 @@ class SideMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: BrandColors.kGrayWhite,
+      color: BrandColors.kWhite,
       child: ListView(
         children: [
           if (ResponsiveWidget.isSmallScreen(context))
