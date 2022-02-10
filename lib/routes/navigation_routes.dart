@@ -1,22 +1,22 @@
-const String homeRoute = "home";
+const String homeRoute = "/home";
 const String homeRouteName = "Home";
 
-const String productsRoute = "products";
+const String productsRoute = "/products";
 const String productsRouteName = "Products";
 
-const String usersRoute = "users";
+const String usersRoute = "/users";
 const String usersRouteName = "Users";
 
-const String ordersRoute = "orders";
+const String ordersRoute = "/orders";
 const String ordersRouteName = "Orders";
 
-const String categoriesRoute = "categories";
+const String categoriesRoute = "/categories";
 const String categoriesRouteName = "Categories";
 
-const String brandsRoute = "brands";
+const String brandsRoute = "/brands";
 const String brandsRouteName = "Brands";
 
-const String authPageRoute = "auth";
+const String authPageRoute = "/auth";
 const String authPageRouteName = "Authentication";
 
 class MenuItem {
