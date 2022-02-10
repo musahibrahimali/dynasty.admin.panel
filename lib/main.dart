@@ -9,6 +9,7 @@ void main() async {
 
   // set the app's controller instances
   Get.put(MenuController());
+  Get.put(NavigationController());
 
   // run the app
   runApp(
@@ -43,5 +44,14 @@ class DynastyUrbanStyle extends StatelessWidget {
       themeMode: ThemeMode.light,
       home: const SiteLayout(),
     );
+  }
+}
+
+class AppPagesController extends StatelessWidget {
+  const AppPagesController({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }

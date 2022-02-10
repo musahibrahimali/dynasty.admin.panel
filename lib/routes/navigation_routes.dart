@@ -25,6 +25,9 @@ const String loginRouteName = "Login";
 const String registrationRoute = "/registration";
 const String registrationRouteName = "Registration";
 
+const String pageControllerRoute = "/page";
+const String pageControllerRouteName = "Registration";
+
 class MenuItem {
   final String name;
   final String route;

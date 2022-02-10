@@ -12,3 +12,4 @@ export './pages/pages.dart';
 export './routes/routes.dart';
 export './controllers/controllers.dart';
 export './constants/constants.dart';
+export './main.dart';
