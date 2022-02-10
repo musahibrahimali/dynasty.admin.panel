@@ -5,12 +5,14 @@ class BrandLogo extends StatelessWidget {
   final List<Color>? backgroundColor;
   final double? logoSize;
   final void Function()? onTap;
+  final MouseCursor? cursor;
 
   const BrandLogo({
     Key? key,
     this.backgroundColor,
     this.logoSize,
     this.onTap,
+    this.cursor,
   }) : super(key: key);
 
   @override
@@ -18,7 +20,7 @@ class BrandLogo extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: MouseRegion(
-        cursor: SystemMouseCursors.click,
+        cursor: cursor ?? SystemMouseCursors.click,
         child: Container(
           padding: const EdgeInsets.symmetric(
             horizontal: 10.0,

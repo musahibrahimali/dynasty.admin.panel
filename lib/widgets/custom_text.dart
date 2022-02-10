@@ -23,6 +23,7 @@ class CustomText extends StatelessWidget {
     return Text(
       text,
       textAlign: align ?? TextAlign.start,
+      overflow: TextOverflow.ellipsis, // hide extra text if space is not enough
       style: GoogleFonts.nunito(
         fontSize: size ?? 16.0,
         color: color ?? BrandColors.kLightGray,
