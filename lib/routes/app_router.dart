@@ -3,10 +3,8 @@ import 'package:dynasty_urban_style/index.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
-    case loginRoute:
-      return _getPageRoute(const LoginPage());
-    case registrationRoute:
-      return _getPageRoute(const RegisterPage());
+    case authPageRoute:
+      return _getPageRoute(const AuthenticationPage());
     case homeRoute:
       return _getPageRoute(const HomePage());
     case productsRoute:
@@ -19,10 +17,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return _getPageRoute(const OrdersPage());
     case usersRoute:
       return _getPageRoute(const UsersPage());
-    case pageControllerRoute:
-      return _getPageRoute(const AppPagesController());
     default:
-      return _getPageRoute(const LoginPage());
+      return _getPageRoute(const HomePage());
   }
 }
 
