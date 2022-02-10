@@ -21,29 +21,8 @@ class SideMenu extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    MouseRegion(
-                      cursor: SystemMouseCursors.click,
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 10.0,
-                          vertical: 10.0,
-                        ),
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            begin: Alignment.topRight,
-                            end: Alignment.bottomLeft,
-                            colors: BrandGradients.navbar,
-                          ),
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                        margin: const EdgeInsets.only(left: 14.0),
-                        child: Image.asset(
-                          'assets/images/core/logo.png',
-                          width: 80.0,
-                        ),
-                      ),
-                    ),
+                  children: const [
+                    BrandLogo(),
                   ],
                 ),
               ],

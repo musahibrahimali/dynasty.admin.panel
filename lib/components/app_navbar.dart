@@ -39,10 +39,8 @@ class NavBar extends StatelessWidget {
               ? Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    BrandLogo(
-                      backgroundColor: BrandGradients.darken,
-                    ),
+                  children: const [
+                    BrandLogo(),
                   ],
                 )
               : Row(

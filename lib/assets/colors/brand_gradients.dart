@@ -11,5 +11,5 @@ class BrandGradients {
   static List<Color> fire = [const Color(0xFFFF5DCD), const Color(0xFFFF8484)];
   static List<Color> fireMon = [const Color(0xFFFF5DfD), const Color(0xFFFFA738)];
   static List<Color> navbar = [const Color(0xFF122523), const Color(0xFF0A2623)];
-  static List<Color> darken = [const Color(0x3c000000), const Color(0x3c000000)];
+  static List<Color> darken = [const Color(0xff000000), const Color(0xff000000)];
 }
