@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget {
                   top: ResponsiveWidget.isSmallScreen(context) ? 56.0 : 8.0,
                 ),
                 child: CustomText(
-                  text: menuController.activeItem.value.toUpperCase(),
+                  text: "Overview".toUpperCase(),
                   size: 24.0,
                   weight: FontWeight.w900,
                   color: BrandColors.kColorDarkBlue,
