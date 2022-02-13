@@ -39,7 +39,9 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
           Center(
             child: Container(
               width: _width / 2,
-              height: _height / 1.6,
+              margin: EdgeInsets.symmetric(
+                vertical: _height / 6.5,
+              ),
               decoration: BoxDecoration(
                 color: BrandColors.kWhite,
                 borderRadius: BorderRadius.circular(10.0),
@@ -165,11 +167,10 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                     // add some animation to the sign in and sign up forms
                     child: AnimatedSwitcher(
                       duration: const Duration(milliseconds: 500),
-                      switchInCurve: Curves.easeIn,
-                      switchOutCurve: Curves.easeOut,
+                      // switchInCurve: Curves.easeIn,
+                      // switchOutCurve: Curves.easeOut,
                       child: _isSignin ? const LoginForm() : const RegisterForm(),
                     ),
-                    // child: _isSignin ? const LoginForm() : const RegisterForm(),
                   ),
                 ],
               ),
