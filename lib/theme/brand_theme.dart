@@ -7,7 +7,8 @@ ThemeData lightThemeData(BuildContext context) {
     primaryColor: BrandColors.kLightThemePrimaryColor,
     scaffoldBackgroundColor: BrandColors.kLightThemeScaffoldBGColor,
     colorScheme: const ColorScheme.light().copyWith(
-      primary: BrandColors.kPrimaryColor,
+      primary: BrandColors.kBrandGreenColor,
+      secondary: BrandColors.kBlue,
       error: BrandColors.kErrorColor,
     ),
     visualDensity: VisualDensity.adaptivePlatformDensity,

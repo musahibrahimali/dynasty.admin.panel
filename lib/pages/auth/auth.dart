@@ -1,3 +1,4 @@
-export './login/login_page.dart';
-export './register/register_page.dart';
+export 'login/login_form.dart';
+export 'register/register_form.dart';
 export './authentication_page.dart';
+export './components/components.dart';

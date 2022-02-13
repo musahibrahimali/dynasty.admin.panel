@@ -42,7 +42,7 @@ class DynastyUrbanStyle extends StatelessWidget {
       darkTheme: darkThemeData(context),
       // themeMode: theme.isLightTheme ? ThemeMode.light : ThemeMode.dark,
       themeMode: ThemeMode.light,
-      home: const SiteLayout(),
+      home: const AuthenticationPage(),
     );
   }
 }

@@ -32,6 +32,8 @@ dependencies:
   # Animation
   lottie: ^1.2.1
   animations: ^2.0.2
+  # simple_animations: ^4.0.1
+  simple_animations: ^3.0.0-nullsafety.3
 
   # Images
   flutter_svg: ^1.0.3
@@ -49,6 +51,7 @@ dependencies:
   intl: ^0.17.0
   auto_size_text: ^3.0.0
   badges: ^2.0.2
+  supercharged: ^2.1.1
 
   # Widgets
   qr_flutter: ^4.0.0
