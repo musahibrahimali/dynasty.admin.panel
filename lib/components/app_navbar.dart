@@ -71,6 +71,7 @@ class NavBar extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              // settings
               IconButton(
                 onPressed: () {},
                 icon: Icon(
@@ -78,6 +79,7 @@ class NavBar extends StatelessWidget {
                   color: BrandColors.kColorDarkBlue,
                 ),
               ),
+              // badges (notifcation)
               Badge(
                 position: BadgePosition.topEnd(top: -2, end: 3),
                 animationDuration: const Duration(milliseconds: 300),
@@ -98,30 +100,40 @@ class NavBar extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
-                margin: const EdgeInsets.only(left: 25.0, right: 15.0),
-                width: 1.0,
-                height: 22.0,
-                color: BrandColors.kLightGray,
-              ),
-              Text(
-                "Nhana",
-                overflow: TextOverflow.ellipsis,
-                style: GoogleFonts.nunito(
-                  fontSize: 18.0,
-                  fontWeight: FontWeight.w700,
-                  color: BrandColors.kColorBlue,
-                ),
-              ),
-              Container(
-                margin: const EdgeInsets.all(4.0),
-                padding: const EdgeInsets.all(4.0),
-                child: CircleAvatar(
-                  backgroundColor: BrandColors.kGrayWhite,
-                  child: Icon(
-                    Icons.person_outline,
-                    color: BrandColors.kColorDarkBlue,
-                  ),
+              // user and user name
+              MouseRegion(
+                cursor: SystemMouseCursors.click,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                      margin: const EdgeInsets.only(left: 25.0, right: 15.0),
+                      width: 1.0,
+                      height: 22.0,
+                      color: BrandColors.kLightGray,
+                    ),
+                    Text(
+                      "Nhana",
+                      overflow: TextOverflow.ellipsis,
+                      style: GoogleFonts.nunito(
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.w700,
+                        color: BrandColors.kColorBlue,
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.all(4.0),
+                      padding: const EdgeInsets.all(4.0),
+                      child: CircleAvatar(
+                        backgroundColor: BrandColors.kGrayWhite,
+                        child: Icon(
+                          Icons.person_outline,
+                          color: BrandColors.kColorDarkBlue,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
