@@ -3,3 +3,4 @@ export './horizontal_menu_item.dart';
 export './vertical_menu_item.dart';
 export './side_menu_item.dart';
 export './brand_logo.dart';
+export './custom_button.dart';

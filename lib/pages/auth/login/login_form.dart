@@ -17,12 +17,16 @@ class _LoginFormState extends State<LoginForm> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
+  // password visibility
+  bool _passwordVisible = false;
+
   // init method
   @override
   void initState() {
     // initialize controllers
     _emailController.text = '';
     _passwordController.text = '';
+    _passwordVisible = false;
     super.initState();
   }
 
@@ -97,7 +101,9 @@ class _LoginFormState extends State<LoginForm> {
                   // add a text field for password
                   TextFormField(
                     controller: _passwordController,
-                    autofocus: true,
+                    autofocus: false,
+                    obscureText: !_passwordVisible,
+                    obscuringCharacter: '*',
                     keyboardType: TextInputType.text,
                     cursorColor: BrandColors.kDarkGray,
                     cursorWidth: 1.0,
@@ -112,6 +118,17 @@ class _LoginFormState extends State<LoginForm> {
                         Icons.lock_open_outlined,
                         color: BrandColors.kColorDarkBlue,
                         size: 26.0,
+                      ),
+                      suffixIcon: InkWell(
+                        onTap: () {
+                          setState(() {
+                            _passwordVisible = !_passwordVisible;
+                          });
+                        },
+                        child: Icon(
+                          _passwordVisible ? Icons.visibility_outlined : Icons.visibility_off_outlined,
+                          color: BrandColors.kLightBlueSky,
+                        ),
                       ),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5.0),
@@ -137,33 +154,10 @@ class _LoginFormState extends State<LoginForm> {
                   ),
                   const SizedBox(height: 22.0),
                   // add a button for logging in
-                  InkWell(
-                    onTap: () {
-                      if (_formKey.currentState!.validate()) {
-                        // do something
-                      }
-                    },
-                    child: MouseRegion(
-                      cursor: SystemMouseCursors.click,
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(
-                          vertical: 10.0,
-                          horizontal: 50.0,
-                        ),
-                        decoration: BoxDecoration(
-                          color: BrandColors.kColorDarkGreen,
-                        ),
-                        child: Text(
-                          "Log In".toUpperCase(),
-                          style: GoogleFonts.poppins(
-                            color: BrandColors.kWhite,
-                            fontSize: 20.0,
-                            letterSpacing: 2.3,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ),
-                    ),
+                  Custombutton(
+                    text: "Log In",
+                    color: BrandColors.kColorDarkGreen,
+                    onPressed: () {},
                   ),
                 ],
               ),
