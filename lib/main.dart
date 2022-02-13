@@ -10,6 +10,7 @@ void main() async {
   // set the app's controller instances
   Get.put(MenuController());
   Get.put(NavigationController());
+  Get.put(ThemeController());
 
   // run the app
   runApp(
@@ -40,8 +41,8 @@ class DynastyUrbanStyle extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: lightThemeData(context),
       darkTheme: darkThemeData(context),
-      // themeMode: theme.isLightTheme ? ThemeMode.light : ThemeMode.dark,
-      themeMode: ThemeMode.light,
+      themeMode: themeController.isLightTheme() ? ThemeMode.light : ThemeMode.dark,
+      // themeMode: ThemeMode.light,
       home: const AuthenticationPage(),
     );
   }
