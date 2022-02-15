@@ -11,10 +11,19 @@ class AuthenticationPage extends StatefulWidget {
 
 class _AuthenticationPageState extends State<AuthenticationPage> {
   // state colors
-  Color _signinBackgroundColor = BrandColors.kBlue;
+  Color _signinBackgroundColor = BrandColors.kColorDarkBlue;
   Color _signupBackgroundColor = BrandColors.kWhiteGray;
   Color _signinTextColor = BrandColors.kWhite;
   Color _signupTextColor = BrandColors.kDarkGray;
+  final List<BoxShadow> _signinShadow = [
+    BoxShadow(
+      color: BrandColors.kHideGray,
+      offset: const Offset(5.0, 0.5),
+      blurRadius: 20.0,
+      spreadRadius: 1.0,
+      blurStyle: BlurStyle.normal,
+    )
+  ];
   // state bools
   bool _isSignin = true;
   bool _isSignup = false;
@@ -40,7 +49,7 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
             child: Container(
               width: _width / 2,
               margin: EdgeInsets.symmetric(
-                vertical: _height / 6.5,
+                vertical: _height / 7.5,
               ),
               decoration: BoxDecoration(
                 color: BrandColors.kWhite,
@@ -90,6 +99,7 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                                 borderRadius: const BorderRadius.only(
                                   topLeft: Radius.circular(10.0),
                                 ),
+                                boxShadow: _isSignin ? _signinShadow : null,
                               ),
                               child: Center(
                                 child: Text(
@@ -145,6 +155,7 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                                 borderRadius: const BorderRadius.only(
                                   topRight: Radius.circular(10.0),
                                 ),
+                                boxShadow: _isSignup ? _signinShadow : null,
                               ),
                               child: Center(
                                 child: Text(

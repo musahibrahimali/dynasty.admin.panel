@@ -1,6 +1,7 @@
 import 'package:badges/badges.dart';
 import 'package:dynasty_urban_style/index.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class NavBar extends StatelessWidget {
@@ -71,6 +72,47 @@ class NavBar extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              // switch between light and dark mode
+              Row(
+                children: <Widget>[
+                  ObxValue(
+                    (data) => Switch(
+                      value: themeController.isLightTheme(),
+                      onChanged: (val) {
+                        themeController.toggleTheme();
+                        Get.changeThemeMode(
+                          themeController.isLightTheme() ? ThemeMode.light : ThemeMode.dark,
+                        );
+                      },
+                    ),
+                    false.obs,
+                  ),
+                  // toogle icons
+                  Obx(
+                    () => IconButton(
+                      onPressed: () {
+                        // update the get material theme controller
+                        themeController.toggleTheme();
+                      },
+                      icon: themeController.isLightTheme()
+                          ? Icon(
+                              Icons.wb_sunny,
+                              color: BrandColors.kColorDarkBlue,
+                            )
+                          : Icon(
+                              Icons.brightness_3,
+                              color: BrandColors.kDarkGray,
+                            ),
+                    ),
+                  ),
+                ],
+              ),
+              Container(
+                margin: const EdgeInsets.only(left: 25.0, right: 15.0),
+                width: 1.0,
+                height: 22.0,
+                color: BrandColors.kLightGray,
+              ),
               // settings
               IconButton(
                 onPressed: () {},

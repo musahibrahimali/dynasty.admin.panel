@@ -14,7 +14,7 @@ void main() async {
 
   // run the app
   runApp(
-    const DynastyUrbanStyle(), // the custom stateless widget
+    DynastyUrbanStyle(), // the custom stateless widget
   );
 
   // handle display orientation on various devices
@@ -31,7 +31,9 @@ void main() async {
 
 // this is the root of the application
 class DynastyUrbanStyle extends StatelessWidget {
-  const DynastyUrbanStyle({Key? key}) : super(key: key);
+  DynastyUrbanStyle({Key? key}) : super(key: key) {
+    themeController.initTheme();
+  }
 
   // This widget is the root of your application.
   @override
@@ -41,7 +43,7 @@ class DynastyUrbanStyle extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: lightThemeData(context),
       darkTheme: darkThemeData(context),
-      themeMode: themeController.isLightTheme() ? ThemeMode.light : ThemeMode.dark,
+      themeMode: ThemeMode.system,
 
       // routes and routing
       initialRoute: authPageRoute,

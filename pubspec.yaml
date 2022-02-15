@@ -53,6 +53,9 @@ dependencies:
   badges: ^2.0.2
   supercharged: ^2.1.1
 
+  # preferences
+  shared_preferences: ^2.0.13
+
   # Widgets
   qr_flutter: ^4.0.0
   material_floating_search_bar: ^0.3.6

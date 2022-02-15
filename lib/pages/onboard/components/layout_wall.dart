@@ -1,8 +1,8 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:dynasty_urban_style/index.dart';
 import 'package:simple_animations/simple_animations.dart';
 import 'package:supercharged/supercharged.dart';
-import './components.dart';
 
 class LayoutWall extends StatelessWidget {
   const LayoutWall({Key? key}) : super(key: key);

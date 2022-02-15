@@ -44,10 +44,6 @@ class _LoginFormState extends State<LoginForm> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const SizedBox(height: 15.0),
-          const BrandLogo(
-            logoSize: 100.0,
-          ),
-          const SizedBox(height: 10.0),
           Container(
             padding: const EdgeInsets.symmetric(
               vertical: 10.0,
@@ -96,7 +92,7 @@ class _LoginFormState extends State<LoginForm> {
                   Custombutton(
                     text: "Log In",
                     color: BrandColors.kColorDarkGreen,
-                    onPressed: () {},
+                    onPressed: () => _logInUser(),
                   ),
                 ],
               ),
@@ -105,5 +101,11 @@ class _LoginFormState extends State<LoginForm> {
         ],
       ),
     );
+  }
+
+  // log in user
+  _logInUser() async {
+    // navigate to home page
+    Navigator.pushNamed(context, homeRoute);
   }
 }

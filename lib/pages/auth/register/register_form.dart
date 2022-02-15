@@ -44,10 +44,6 @@ class _RegisterFormState extends State<RegisterForm> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const SizedBox(height: 15.0),
-          const BrandLogo(
-            logoSize: 100.0,
-          ),
-          const SizedBox(height: 10.0),
           Container(
             padding: const EdgeInsets.symmetric(
               vertical: 10.0,
