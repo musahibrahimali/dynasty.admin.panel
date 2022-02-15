@@ -42,8 +42,28 @@ class DynastyUrbanStyle extends StatelessWidget {
       theme: lightThemeData(context),
       darkTheme: darkThemeData(context),
       themeMode: themeController.isLightTheme() ? ThemeMode.light : ThemeMode.dark,
-      // themeMode: ThemeMode.light,
-      home: const AuthenticationPage(),
+
+      // routes and routing
+      initialRoute: authPageRoute,
+      unknownRoute: GetPage(
+        name: '/not-found',
+        page: () => const NotFoundPage(),
+        transition: Transition.fadeIn,
+        transitionDuration: const Duration(milliseconds: 3000),
+      ),
+      // get all pages
+      getPages: [
+        GetPage(
+          name: rootRoute,
+          page: () {
+            return const SiteLayout();
+          },
+        ),
+        GetPage(
+          name: authPageRoute,
+          page: () => const AuthenticationPage(),
+        ),
+      ],
     );
   }
 }

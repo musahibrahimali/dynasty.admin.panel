@@ -52,7 +52,9 @@ ThemeData darkThemeData(BuildContext context) {
       },
     ),
     textTheme: GoogleFonts.interTextTheme(
-      Theme.of(context).textTheme.apply(bodyColor: BrandColors.kLightThemeNormalTextColor),
+      Theme.of(context).textTheme.apply(
+            bodyColor: BrandColors.kLightThemeNormalTextColor,
+          ),
     ),
     hintColor: BrandColors.kDarkThemeTextFieldHintColor,
     textSelectionTheme: TextSelectionThemeData(
