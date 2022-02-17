@@ -30,7 +30,6 @@ dependencies:
   google_fonts: ^2.2.0
 
   # Animation
-  lottie: ^1.2.1
   animations: ^2.0.2
   # simple_animations: ^4.0.1
   simple_animations: ^3.0.0-nullsafety.3

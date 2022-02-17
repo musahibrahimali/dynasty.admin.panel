@@ -57,7 +57,7 @@ class NavBar extends StatelessWidget {
                     ),
                     const SizedBox(width: 8.0),
                     Text(
-                      "Dynasty",
+                      "Dashboard",
                       style: GoogleFonts.montserrat(
                         fontSize: 18.0,
                         fontWeight: FontWeight.w900,
