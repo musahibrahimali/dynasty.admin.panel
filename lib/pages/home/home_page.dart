@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
                       menuController.activeItem.value.length > 2 ? "Overview".toUpperCase() : "Overview".toUpperCase(),
                   size: 24.0,
                   weight: FontWeight.w900,
-                  color: BrandColors.kColorDarkBlue,
+                  color: themeController.isLightTheme() ? BrandColors.kColorDarkTheme : BrandColors.kWhiteGray,
                 ),
               ),
             ],

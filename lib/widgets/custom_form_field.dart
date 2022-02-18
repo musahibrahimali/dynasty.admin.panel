@@ -7,7 +7,6 @@ class CustomFormField extends StatelessWidget {
   final double? cursorWidth;
   final Color? cursorColor;
   final double? fontSize;
-  final Brightness? keyboardAppearance;
   final TextInputType? keyboardType;
   final bool? autoFocus;
   final String label;
@@ -25,7 +24,6 @@ class CustomFormField extends StatelessWidget {
     this.cursorWidth,
     this.fontSize,
     this.cursorColor,
-    this.keyboardAppearance,
     this.keyboardType,
     this.autoFocus,
     this.prefixIcon,
@@ -46,7 +44,7 @@ class CustomFormField extends StatelessWidget {
       keyboardType: keyboardType ?? TextInputType.text,
       cursorColor: cursorColor ?? BrandColors.kDarkGray,
       cursorWidth: cursorWidth ?? 1.0,
-      keyboardAppearance: keyboardAppearance ?? Brightness.light,
+      keyboardAppearance: themeController.isLightTheme() ? Brightness.light : Brightness.dark,
       decoration: InputDecoration(
         labelText: label,
         labelStyle: GoogleFonts.lato(

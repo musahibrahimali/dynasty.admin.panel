@@ -8,3 +8,6 @@ ThemeController themeController = ThemeController.instance;
 
 // share preference instance
 Future<SharedPreferences> sharedPreferences = SharedPreferences.getInstance();
+
+// is light theme active
+final isLightTheme = themeController.isLightThemeActive();

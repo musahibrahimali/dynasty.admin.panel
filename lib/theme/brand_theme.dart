@@ -7,7 +7,7 @@ ThemeData lightThemeData(BuildContext context) {
     primaryColor: BrandColors.kLightThemePrimaryColor,
     scaffoldBackgroundColor: BrandColors.kLightThemeScaffoldBGColor,
     colorScheme: const ColorScheme.light().copyWith(
-      primary: BrandColors.kBrandGreenColor,
+      primary: BrandColors.kPrimaryColor,
       secondary: BrandColors.kBlue,
       error: BrandColors.kErrorColor,
     ),
@@ -36,9 +36,9 @@ ThemeData lightThemeData(BuildContext context) {
 ThemeData darkThemeData(BuildContext context) {
   return ThemeData.dark().copyWith(
     primaryColor: BrandColors.kDarkThemePrimaryColor,
-    scaffoldBackgroundColor: BrandColors.kDarkThemeScaffoldBGColor,
+    scaffoldBackgroundColor: BrandColors.kColorDarkBlue,
     colorScheme: const ColorScheme.dark().copyWith(
-      primary: BrandColors.kDarkThemePrimaryColor,
+      primary: BrandColors.kPrimaryColor,
       error: BrandColors.kErrorColor,
     ),
     visualDensity: VisualDensity.adaptivePlatformDensity,

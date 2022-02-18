@@ -1,5 +1,6 @@
 import 'package:dynasty_urban_style/index.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class MediumScreen extends StatelessWidget {
   const MediumScreen({Key? key}) : super(key: key);
@@ -12,9 +13,14 @@ class MediumScreen extends StatelessWidget {
         const Expanded(child: SideMenu()),
         Expanded(
           flex: 5,
-          child: Container(
-            margin: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: localNavigator(),
+          child: Obx(
+            () => Container(
+              decoration: BoxDecoration(
+                color: themeController.isLightTheme() ? BrandColors.kColorBackground : BrandColors.kColorDarkTheme,
+              ),
+              margin: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: localNavigator(),
+            ),
           ),
         ),
       ],

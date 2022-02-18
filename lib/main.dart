@@ -2,10 +2,18 @@ import 'package:dynasty_urban_style/index.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter/services.dart';
+import 'package:graphql_flutter/graphql_flutter.dart';
 
 void main() async {
   // ensure all widgets and bindings are created
   WidgetsFlutterBinding.ensureInitialized();
+
+  /*
+  * set up graphql for flutter
+  */
+
+  // init hive store
+  await initHiveForFlutter();
 
   // set the app's controller instances
   Get.put(MenuController());
@@ -38,34 +46,53 @@ class DynastyUrbanStyle extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      title: 'Dynasty Urban Style Dashboard',
-      debugShowCheckedModeBanner: false,
-      theme: lightThemeData(context),
-      darkTheme: darkThemeData(context),
-      themeMode: ThemeMode.system,
+    // init graphql client
+    final HttpLink httpLink = HttpLink(
+      'http://localhost:5000/graphql',
+    );
 
-      // routes and routing
-      initialRoute: authPageRoute,
-      unknownRoute: GetPage(
-        name: '/not-found',
-        page: () => const NotFoundPage(),
-        transition: Transition.fadeIn,
-        transitionDuration: const Duration(milliseconds: 3000),
+    // the final link
+    final Link link = httpLink;
+
+    // create a client value notifier
+    final ValueNotifier<GraphQLClient> _client = ValueNotifier<GraphQLClient>(
+      GraphQLClient(
+        cache: GraphQLCache(store: HiveStore()),
+        link: link,
       ),
-      // get all pages
-      getPages: [
-        GetPage(
-          name: rootRoute,
-          page: () {
-            return const SiteLayout();
-          },
+    );
+
+    return GraphQLProvider(
+      client: _client,
+      child: GetMaterialApp(
+        title: 'Dynasty Urban Style Dashboard',
+        debugShowCheckedModeBanner: false,
+        theme: lightThemeData(context),
+        darkTheme: darkThemeData(context),
+        themeMode: isLightTheme ? ThemeMode.light : ThemeMode.dark,
+
+        // routes and routing
+        initialRoute: authPageRoute,
+        unknownRoute: GetPage(
+          name: '/not-found',
+          page: () => const NotFoundPage(),
+          transition: Transition.fadeIn,
+          transitionDuration: const Duration(milliseconds: 3000),
         ),
-        GetPage(
-          name: authPageRoute,
-          page: () => const AuthenticationPage(),
-        ),
-      ],
+        // get all pages
+        getPages: [
+          GetPage(
+            name: rootRoute,
+            page: () {
+              return const SiteLayout();
+            },
+          ),
+          GetPage(
+            name: authPageRoute,
+            page: () => const AuthenticationPage(),
+          ),
+        ],
+      ),
     );
   }
 }
