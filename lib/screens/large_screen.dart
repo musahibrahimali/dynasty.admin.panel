@@ -16,7 +16,7 @@ class LargeScreen extends StatelessWidget {
           child: Obx(
             () => Container(
               decoration: BoxDecoration(
-                color: themeController.isLightTheme() ? BrandColors.kColorBackground : BrandColors.kColorDarkTheme,
+                color: themeController.isLightTheme ? BrandColors.kColorBackground : BrandColors.kColorDarkTheme,
               ),
               margin: const EdgeInsets.symmetric(horizontal: 16.0),
               child: localNavigator(),

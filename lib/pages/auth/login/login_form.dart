@@ -29,6 +29,15 @@ class _LoginFormState extends State<LoginForm> {
     super.initState();
   }
 
+  // dispose method
+  @override
+  void dispose() {
+    // dispose controllers
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     // width and height of the screen
@@ -86,13 +95,34 @@ class _LoginFormState extends State<LoginForm> {
                         color: BrandColors.kLightBlueSky,
                       ),
                     ),
+                    onSubmit: (value) async {
+                      // validate form
+                      if (_formKey.currentState!.validate()) {
+                        // get the email and password
+                        String email = _emailController.text;
+                        String password = _passwordController.text;
+
+                        // call the login method
+                        await _logInAdmin(email, password);
+                      }
+                    },
                   ),
                   const SizedBox(height: 22.0),
-                  // add a button for logging in
+                  // add a button for login
                   Custombutton(
                     text: "Log In",
                     color: BrandColors.kColorDarkGreen,
-                    onPressed: () => _logInUser(),
+                    onPressed: () async {
+                      // check if the form is valid
+                      if (_formKey.currentState!.validate()) {
+                        // get the email and password
+                        String email = _emailController.text;
+                        String password = _passwordController.text;
+
+                        // call the login method
+                        await _logInAdmin(email, password);
+                      }
+                    },
                   ),
                 ],
               ),
@@ -104,8 +134,15 @@ class _LoginFormState extends State<LoginForm> {
   }
 
   // log in user
-  _logInUser() async {
-    // navigate to home page
-    Navigator.pushNamed(context, homeRoute);
+  _logInAdmin(email, password) async {
+    var userDetails = {
+      'email': email,
+      'password': password,
+    };
+    var _admin = await loginAdmin(userDetails);
+    if (_admin != null) {
+      // navigate to home page
+      Navigator.pushNamed(context, homeRoute);
+    }
   }
 }

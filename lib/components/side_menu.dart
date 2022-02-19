@@ -8,7 +8,7 @@ class SideMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Obx(
       () => Container(
-        color: themeController.isLightTheme() ? BrandColors.kColorBackground : BrandColors.kColorDarkBlue,
+        color: themeController.isLightTheme ? BrandColors.kColorBackground : BrandColors.kColorDarkBlue,
         child: ListView(
           children: [
             if (ResponsiveWidget.isSmallScreen(context))

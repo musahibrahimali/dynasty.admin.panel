@@ -54,7 +54,7 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                   vertical: _height / 10,
                 ),
                 decoration: BoxDecoration(
-                  color: themeController.isLightTheme() ? BrandColors.kColorBackground : BrandColors.kColorDarkTheme,
+                  color: themeController.isLightTheme ? BrandColors.kColorBackground : BrandColors.kColorDarkTheme,
                   borderRadius: BorderRadius.circular(10.0),
                 ),
                 child: Column(
@@ -102,11 +102,11 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                                   borderRadius: const BorderRadius.only(
                                     topLeft: Radius.circular(10.0),
                                   ),
-                                  boxShadow: (!themeController.isLightTheme() && _isSignin)
+                                  boxShadow: (!themeController.isLightTheme && _isSignin)
                                       ? [
                                           BoxShadow(
                                             color:
-                                                themeController.isLightTheme() ? BrandColors.kHideGray : Colors.black12,
+                                                themeController.isLightTheme ? BrandColors.kHideGray : Colors.black12,
                                             offset: const Offset(5.0, 0.5),
                                             blurRadius: 10.0,
                                             spreadRadius: 0.5,
@@ -170,11 +170,11 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                                   borderRadius: const BorderRadius.only(
                                     topRight: Radius.circular(10.0),
                                   ),
-                                  boxShadow: (!themeController.isLightTheme() && _isSignup)
+                                  boxShadow: (!themeController.isLightTheme && _isSignup)
                                       ? [
                                           BoxShadow(
                                             color:
-                                                themeController.isLightTheme() ? BrandColors.kHideGray : Colors.black12,
+                                                themeController.isLightTheme ? BrandColors.kHideGray : Colors.black12,
                                             offset: const Offset(5.0, 0.5),
                                             blurRadius: 10.0,
                                             spreadRadius: 0.5,

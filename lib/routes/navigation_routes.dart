@@ -19,7 +19,7 @@ const String brandsRoute = "/brands";
 const String brandsRouteName = "Brands";
 
 const String authPageRoute = "/auth";
-const String authPageRouteName = "Authentication";
+const String authPageRouteName = "Log Out";
 
 class MenuItem {
   final String name;

@@ -29,7 +29,7 @@ class InfoCard extends StatelessWidget {
             height: 136.0,
             alignment: Alignment.center,
             decoration: BoxDecoration(
-              color: themeController.isLightTheme() ? BrandColors.kColorBackground : BrandColors.kColorDarkTheme,
+              color: themeController.isLightTheme ? BrandColors.kColorBackground : BrandColors.kColorDarkTheme,
               boxShadow: [
                 BoxShadow(
                   offset: const Offset(0.0, 6.0),

@@ -24,7 +24,7 @@ class RevenueInfo extends StatelessWidget {
               TextSpan(
                 text: "$title \n\n",
                 style: TextStyle(
-                  color: themeController.isLightTheme() ? BrandColors.kLightGray : BrandColors.kHighlightGray,
+                  color: themeController.isLightTheme ? BrandColors.kLightGray : BrandColors.kHighlightGray,
                   fontSize: 16.0,
                 ),
               ),

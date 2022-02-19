@@ -13,7 +13,7 @@ class AvailableDriversTable extends StatelessWidget {
     return Obx(
       () => Container(
         decoration: BoxDecoration(
-          color: themeController.isLightTheme() ? BrandColors.kColorBackground : BrandColors.kColorDarkTheme,
+          color: themeController.isLightTheme ? BrandColors.kColorBackground : BrandColors.kColorDarkTheme,
           border: Border.all(
             color: BrandColors.kColorBlue.withOpacity(0.4),
             width: 0.5,
@@ -41,7 +41,7 @@ class AvailableDriversTable extends StatelessWidget {
                 const SizedBox(width: 10.0),
                 CustomText(
                   text: "Available Drivers".toUpperCase(),
-                  color: themeController.isLightTheme() ? BrandColors.kDarkGray : BrandColors.kHighlightGray,
+                  color: themeController.isLightTheme ? BrandColors.kDarkGray : BrandColors.kHighlightGray,
                   weight: FontWeight.w900,
                 ),
               ],
@@ -56,7 +56,7 @@ class AvailableDriversTable extends StatelessWidget {
                     "Name".toUpperCase(),
                     style: GoogleFonts.nunito(
                       fontSize: 18.0,
-                      color: themeController.isLightTheme() ? BrandColors.kDarkGray : BrandColors.kHighlightGray,
+                      color: themeController.isLightTheme ? BrandColors.kDarkGray : BrandColors.kHighlightGray,
                       fontWeight: FontWeight.w700,
                     ),
                   ),
@@ -67,7 +67,7 @@ class AvailableDriversTable extends StatelessWidget {
                     'Location'.toUpperCase(),
                     style: GoogleFonts.nunito(
                       fontSize: 18.0,
-                      color: themeController.isLightTheme() ? BrandColors.kDarkGray : BrandColors.kHighlightGray,
+                      color: themeController.isLightTheme ? BrandColors.kDarkGray : BrandColors.kHighlightGray,
                       fontWeight: FontWeight.w700,
                     ),
                   ),
@@ -77,7 +77,7 @@ class AvailableDriversTable extends StatelessWidget {
                     'Rating'.toUpperCase(),
                     style: GoogleFonts.nunito(
                       fontSize: 18.0,
-                      color: themeController.isLightTheme() ? BrandColors.kDarkGray : BrandColors.kHighlightGray,
+                      color: themeController.isLightTheme ? BrandColors.kDarkGray : BrandColors.kHighlightGray,
                       fontWeight: FontWeight.w700,
                     ),
                   ),
@@ -87,7 +87,7 @@ class AvailableDriversTable extends StatelessWidget {
                     'Action'.toUpperCase(),
                     style: GoogleFonts.nunito(
                       fontSize: 18.0,
-                      color: themeController.isLightTheme() ? BrandColors.kDarkGray : BrandColors.kHighlightGray,
+                      color: themeController.isLightTheme ? BrandColors.kDarkGray : BrandColors.kHighlightGray,
                       fontWeight: FontWeight.w700,
                     ),
                   ),
@@ -120,9 +120,9 @@ class AvailableDriversTable extends StatelessWidget {
                     DataCell(
                       Container(
                         decoration: BoxDecoration(
-                          color: themeController.isLightTheme() ? BrandColors.kWhite : BrandColors.kColorDarkTheme,
+                          color: themeController.isLightTheme ? BrandColors.kWhite : BrandColors.kColorDarkTheme,
                           border: Border.all(
-                            color: themeController.isLightTheme() ? BrandColors.kColorBlue : BrandColors.kWhiteGray,
+                            color: themeController.isLightTheme ? BrandColors.kColorBlue : BrandColors.kWhiteGray,
                             width: 0.5,
                           ),
                         ),
@@ -132,7 +132,7 @@ class AvailableDriversTable extends StatelessWidget {
                         ),
                         child: CustomText(
                           text: "Assign Delivery",
-                          color: themeController.isLightTheme() ? BrandColors.kColorBlue : BrandColors.kWhiteGray,
+                          color: themeController.isLightTheme ? BrandColors.kColorBlue : BrandColors.kWhiteGray,
                           weight: FontWeight.w700,
                         ),
                       ),

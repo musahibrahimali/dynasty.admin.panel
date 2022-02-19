@@ -5,9 +5,13 @@ import 'package:shared_preferences/shared_preferences.dart';
 MenuController menuController = MenuController.instance;
 NavigationController navigationController = NavigationController.instance;
 ThemeController themeController = ThemeController.instance;
+AdminController adminController = AdminController.instance;
 
 // share preference instance
 Future<SharedPreferences> sharedPreferences = SharedPreferences.getInstance();
 
 // is light theme active
-final isLightTheme = themeController.isLightThemeActive();
+final isLightTheme = themeController.isLightTheme;
+
+// admin instance
+Admin admin = Admin();

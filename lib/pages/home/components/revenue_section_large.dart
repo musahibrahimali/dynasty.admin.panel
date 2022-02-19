@@ -19,7 +19,7 @@ class RevenueSectionLarge extends StatelessWidget {
           horizontal: 10.0,
         ),
         decoration: BoxDecoration(
-          color: themeController.isLightTheme() ? BrandColors.kColorBackground : BrandColors.kWhiteGray,
+          color: themeController.isLightTheme ? BrandColors.kColorBackground : BrandColors.kWhiteGray,
           borderRadius: BorderRadius.circular(8.0),
           boxShadow: [
             BoxShadow(
@@ -43,7 +43,7 @@ class RevenueSectionLarge extends StatelessWidget {
                     text: "Revenue Chart".toUpperCase(),
                     size: 20.0,
                     weight: FontWeight.bold,
-                    color: themeController.isLightTheme() ? BrandColors.kLightGray : BrandColors.kHighlightGray,
+                    color: themeController.isLightTheme ? BrandColors.kLightGray : BrandColors.kHighlightGray,
                   ),
                   SizedBox(
                     width: 600.0,
@@ -56,7 +56,7 @@ class RevenueSectionLarge extends StatelessWidget {
             Container(
               width: 1.0,
               height: 120.0,
-              color: themeController.isLightTheme() ? BrandColors.kWhiteGray : BrandColors.kColorDefaultDivider,
+              color: themeController.isLightTheme ? BrandColors.kWhiteGray : BrandColors.kColorDefaultDivider,
             ),
             Expanded(
               child: Column(

@@ -11,7 +11,7 @@ class SmallScreen extends StatelessWidget {
       () => Container(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         decoration: BoxDecoration(
-          color: themeController.isLightTheme() ? BrandColors.kColorBackground : BrandColors.kColorDarkTheme,
+          color: themeController.isLightTheme ? BrandColors.kColorBackground : BrandColors.kColorDarkTheme,
         ),
         child: localNavigator(),
       ),

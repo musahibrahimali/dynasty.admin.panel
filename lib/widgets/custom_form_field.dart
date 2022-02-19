@@ -16,6 +16,7 @@ class CustomFormField extends StatelessWidget {
   final Color? borderColor;
   final Color? focusedBorderColor;
   final bool? isObscured;
+  final void Function(String)? onSubmit;
 
   const CustomFormField({
     Key? key,
@@ -32,6 +33,7 @@ class CustomFormField extends StatelessWidget {
     this.borderColor,
     this.focusedBorderColor,
     this.isObscured,
+    this.onSubmit,
   }) : super(key: key);
 
   @override
@@ -44,7 +46,7 @@ class CustomFormField extends StatelessWidget {
       keyboardType: keyboardType ?? TextInputType.text,
       cursorColor: cursorColor ?? BrandColors.kDarkGray,
       cursorWidth: cursorWidth ?? 1.0,
-      keyboardAppearance: themeController.isLightTheme() ? Brightness.light : Brightness.dark,
+      keyboardAppearance: themeController.isLightTheme ? Brightness.light : Brightness.dark,
       decoration: InputDecoration(
         labelText: label,
         labelStyle: GoogleFonts.lato(
@@ -74,6 +76,7 @@ class CustomFormField extends StatelessWidget {
         }
         return null;
       },
+      onFieldSubmitted: onSubmit,
     );
   }
 }

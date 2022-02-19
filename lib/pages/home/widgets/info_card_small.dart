@@ -25,12 +25,12 @@ class InfoCardSmall extends StatelessWidget {
           child: Container(
               padding: const EdgeInsets.all(24.0),
               decoration: BoxDecoration(
-                color: themeController.isLightTheme() ? BrandColors.kColorBackground : BrandColors.kColorDarkTheme,
+                color: themeController.isLightTheme ? BrandColors.kColorBackground : BrandColors.kColorDarkTheme,
                 borderRadius: BorderRadius.circular(8.0),
                 border: Border.all(
                   // if its active and light theme, then show border
                   color:
-                      isActive && themeController.isLightTheme() ? BrandColors.kColorLightBlue : BrandColors.kWhiteGray,
+                      isActive && themeController.isLightTheme ? BrandColors.kColorLightBlue : BrandColors.kWhiteGray,
                   width: 0.5,
                 ),
               ),

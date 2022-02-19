@@ -1,4 +1,4 @@
-export './api/api.dart';
+export './services/services.dart';
 export './layout/layout.dart';
 export './assets/assets.dart';
 export './helpers/helpers.dart';
@@ -12,3 +12,4 @@ export './pages/pages.dart';
 export './routes/routes.dart';
 export './controllers/controllers.dart';
 export './constants/constants.dart';
+export './api/api.dart';

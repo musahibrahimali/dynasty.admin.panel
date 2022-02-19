@@ -64,10 +64,10 @@ class _RegisterFormState extends State<RegisterForm> {
                       emailController: _emailController,
                       label: 'Email Address',
                       focusedBorderColor:
-                          themeController.isLightTheme() ? BrandColors.kColorDarkBlue : BrandColors.kColorDarkGreen,
+                          themeController.isLightTheme ? BrandColors.kColorDarkBlue : BrandColors.kColorDarkGreen,
                       prefixIcon: Icon(
                         Icons.email_outlined,
-                        color: themeController.isLightTheme() ? BrandColors.kColorDarkBlue : BrandColors.kLightBlueSky,
+                        color: themeController.isLightTheme ? BrandColors.kColorDarkBlue : BrandColors.kLightBlueSky,
                         size: 26.0,
                       ),
                     ),
@@ -77,10 +77,10 @@ class _RegisterFormState extends State<RegisterForm> {
                       emailController: _firstNameController,
                       label: 'First Name',
                       focusedBorderColor:
-                          themeController.isLightTheme() ? BrandColors.kColorDarkBlue : BrandColors.kColorDarkGreen,
+                          themeController.isLightTheme ? BrandColors.kColorDarkBlue : BrandColors.kColorDarkGreen,
                       prefixIcon: Icon(
                         Icons.person_outline,
-                        color: themeController.isLightTheme() ? BrandColors.kColorDarkBlue : BrandColors.kLightBlueSky,
+                        color: themeController.isLightTheme ? BrandColors.kColorDarkBlue : BrandColors.kLightBlueSky,
                         size: 26.0,
                       ),
                     ),
@@ -90,10 +90,10 @@ class _RegisterFormState extends State<RegisterForm> {
                       emailController: _lastNameController,
                       label: 'Last Name',
                       focusedBorderColor:
-                          themeController.isLightTheme() ? BrandColors.kColorDarkBlue : BrandColors.kColorDarkGreen,
+                          themeController.isLightTheme ? BrandColors.kColorDarkBlue : BrandColors.kColorDarkGreen,
                       prefixIcon: Icon(
                         Icons.person_outline,
-                        color: themeController.isLightTheme() ? BrandColors.kColorDarkBlue : BrandColors.kLightBlueSky,
+                        color: themeController.isLightTheme ? BrandColors.kColorDarkBlue : BrandColors.kLightBlueSky,
                         size: 26.0,
                       ),
                     ),
@@ -103,10 +103,10 @@ class _RegisterFormState extends State<RegisterForm> {
                       emailController: _phoneNumberController,
                       label: 'Phone Number',
                       focusedBorderColor:
-                          themeController.isLightTheme() ? BrandColors.kColorDarkBlue : BrandColors.kColorDarkGreen,
+                          themeController.isLightTheme ? BrandColors.kColorDarkBlue : BrandColors.kColorDarkGreen,
                       prefixIcon: Icon(
                         Icons.call_outlined,
-                        color: themeController.isLightTheme() ? BrandColors.kColorDarkBlue : BrandColors.kLightBlueSky,
+                        color: themeController.isLightTheme ? BrandColors.kColorDarkBlue : BrandColors.kLightBlueSky,
                         size: 26.0,
                       ),
                     ),
@@ -117,10 +117,10 @@ class _RegisterFormState extends State<RegisterForm> {
                       label: "Password",
                       isObscured: !_passwordVisible,
                       focusedBorderColor:
-                          themeController.isLightTheme() ? BrandColors.kColorDarkBlue : BrandColors.kColorDarkGreen,
+                          themeController.isLightTheme ? BrandColors.kColorDarkBlue : BrandColors.kColorDarkGreen,
                       prefixIcon: Icon(
                         Icons.lock_outline,
-                        color: themeController.isLightTheme() ? BrandColors.kColorDarkBlue : BrandColors.kLightBlueSky,
+                        color: themeController.isLightTheme ? BrandColors.kColorDarkBlue : BrandColors.kLightBlueSky,
                         size: 26.0,
                       ),
                       suffixIcon: InkWell(
@@ -140,7 +140,7 @@ class _RegisterFormState extends State<RegisterForm> {
                     // add a button for logging in
                     Custombutton(
                       text: "Register",
-                      color: themeController.isLightTheme() ? BrandColors.kColorDarkBlue : BrandColors.kColorLightBlue,
+                      color: themeController.isLightTheme ? BrandColors.kColorDarkBlue : BrandColors.kColorLightBlue,
                       onPressed: () {},
                     ),
                   ],

@@ -23,7 +23,7 @@ class NavBar extends StatelessWidget {
           vertical: 10.0,
         ),
         decoration: BoxDecoration(
-          color: themeController.isLightTheme() ? BrandColors.kColorBackground : BrandColors.kColorDarkBlue,
+          color: themeController.isLightTheme ? BrandColors.kColorBackground : BrandColors.kColorDarkBlue,
           boxShadow: const [
             BoxShadow(
               color: Colors.black12,
@@ -53,7 +53,7 @@ class NavBar extends StatelessWidget {
                         },
                         icon: Icon(
                           Icons.menu,
-                          color: themeController.isLightTheme() ? BrandColors.kDarkGray : BrandColors.kWhite,
+                          color: themeController.isLightTheme ? BrandColors.kDarkGray : BrandColors.kWhite,
                         ),
                       ),
                       const SizedBox(width: 8.0),
@@ -62,7 +62,7 @@ class NavBar extends StatelessWidget {
                         style: GoogleFonts.montserrat(
                           fontSize: 18.0,
                           fontWeight: FontWeight.w900,
-                          color: themeController.isLightTheme() ? BrandColors.kColorDarkBlue : BrandColors.kWhite,
+                          color: themeController.isLightTheme ? BrandColors.kColorDarkBlue : BrandColors.kWhite,
                           letterSpacing: 2.5,
                         ),
                       ),
@@ -78,11 +78,11 @@ class NavBar extends StatelessWidget {
                   children: <Widget>[
                     ObxValue(
                       (data) => Switch(
-                        value: themeController.isLightTheme(),
+                        value: themeController.isLightTheme,
                         onChanged: (val) {
                           themeController.toggleTheme();
                           Get.changeThemeMode(
-                            themeController.isLightTheme() ? ThemeMode.light : ThemeMode.dark,
+                            themeController.isLightTheme ? ThemeMode.light : ThemeMode.dark,
                           );
                         },
                       ),
@@ -95,11 +95,11 @@ class NavBar extends StatelessWidget {
                           // update the get material theme controller
                           themeController.toggleTheme();
                         },
-                        icon: themeController.isLightTheme()
+                        icon: themeController.isLightTheme
                             ? Icon(
                                 Icons.wb_sunny,
                                 color:
-                                    themeController.isLightTheme() ? BrandColors.kDarkGray : BrandColors.kColorDarkBlue,
+                                    themeController.isLightTheme ? BrandColors.kDarkGray : BrandColors.kColorDarkBlue,
                               )
                             : Icon(
                                 Icons.brightness_3,
@@ -113,14 +113,14 @@ class NavBar extends StatelessWidget {
                   margin: const EdgeInsets.only(left: 25.0, right: 15.0),
                   width: 1.0,
                   height: 22.0,
-                  color: themeController.isLightTheme() ? BrandColors.kLightGray : BrandColors.kWhiteGray,
+                  color: themeController.isLightTheme ? BrandColors.kLightGray : BrandColors.kWhiteGray,
                 ),
                 // settings
                 IconButton(
                   onPressed: () {},
                   icon: Icon(
                     Icons.settings_outlined,
-                    color: themeController.isLightTheme() ? BrandColors.kColorDarkBlue : BrandColors.kWhiteGray,
+                    color: themeController.isLightTheme ? BrandColors.kColorDarkBlue : BrandColors.kWhiteGray,
                   ),
                 ),
                 // badges (notifcation)
@@ -140,7 +140,7 @@ class NavBar extends StatelessWidget {
                     onPressed: () {},
                     icon: Icon(
                       Icons.notifications_none,
-                      color: themeController.isLightTheme() ? BrandColors.kColorDarkBlue : BrandColors.kWhiteGray,
+                      color: themeController.isLightTheme ? BrandColors.kColorDarkBlue : BrandColors.kWhiteGray,
                     ),
                   ),
                 ),
@@ -163,7 +163,7 @@ class NavBar extends StatelessWidget {
                         style: GoogleFonts.nunito(
                           fontSize: 18.0,
                           fontWeight: FontWeight.w700,
-                          color: themeController.isLightTheme() ? BrandColors.kBlue : BrandColors.kWhiteGray,
+                          color: themeController.isLightTheme ? BrandColors.kBlue : BrandColors.kWhiteGray,
                         ),
                       ),
                       Container(
@@ -171,10 +171,10 @@ class NavBar extends StatelessWidget {
                         padding: const EdgeInsets.all(4.0),
                         child: CircleAvatar(
                           backgroundColor:
-                              themeController.isLightTheme() ? BrandColors.kGrayWhite : BrandColors.kWhiteGray,
+                              themeController.isLightTheme ? BrandColors.kGrayWhite : BrandColors.kWhiteGray,
                           child: Icon(
                             Icons.person_outline,
-                            color: themeController.isLightTheme() ? BrandColors.kColorDarkBlue : BrandColors.kWhiteGray,
+                            color: themeController.isLightTheme ? BrandColors.kColorDarkBlue : BrandColors.kWhiteGray,
                           ),
                         ),
                       ),

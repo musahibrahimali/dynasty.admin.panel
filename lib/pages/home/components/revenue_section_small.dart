@@ -13,7 +13,7 @@ class RevenueSectionSmall extends StatelessWidget {
         padding: const EdgeInsets.all(24.0),
         margin: const EdgeInsets.symmetric(vertical: 30.0),
         decoration: BoxDecoration(
-          color: themeController.isLightTheme() ? BrandColors.kColorBackground : BrandColors.kWhiteGray,
+          color: themeController.isLightTheme ? BrandColors.kColorBackground : BrandColors.kWhiteGray,
           borderRadius: BorderRadius.circular(8.0),
           boxShadow: [
             BoxShadow(
@@ -38,7 +38,7 @@ class RevenueSectionSmall extends StatelessWidget {
                     text: "Revenue Chart".toUpperCase(),
                     size: 20.0,
                     weight: FontWeight.bold,
-                    color: themeController.isLightTheme() ? BrandColors.kLightGray : BrandColors.kHighlightGray,
+                    color: themeController.isLightTheme ? BrandColors.kLightGray : BrandColors.kHighlightGray,
                   ),
                   SizedBox(
                     width: 600.0,

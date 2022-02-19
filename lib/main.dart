@@ -19,6 +19,7 @@ void main() async {
   Get.put(MenuController());
   Get.put(NavigationController());
   Get.put(ThemeController());
+  Get.put(AdminController());
 
   // run the app
   runApp(
@@ -41,29 +42,14 @@ void main() async {
 class DynastyUrbanStyle extends StatelessWidget {
   DynastyUrbanStyle({Key? key}) : super(key: key) {
     themeController.initTheme();
+    adminController.initAdmin();
   }
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    // init graphql client
-    final HttpLink httpLink = HttpLink(
-      'http://localhost:5000/graphql',
-    );
-
-    // the final link
-    final Link link = httpLink;
-
-    // create a client value notifier
-    final ValueNotifier<GraphQLClient> _client = ValueNotifier<GraphQLClient>(
-      GraphQLClient(
-        cache: GraphQLCache(store: HiveStore()),
-        link: link,
-      ),
-    );
-
     return GraphQLProvider(
-      client: _client,
+      client: graphqlClient,
       child: GetMaterialApp(
         title: 'Dynasty Urban Style Dashboard',
         debugShowCheckedModeBanner: false,
@@ -72,20 +58,20 @@ class DynastyUrbanStyle extends StatelessWidget {
         themeMode: isLightTheme ? ThemeMode.light : ThemeMode.dark,
 
         // routes and routing
-        initialRoute: authPageRoute,
+        initialRoute: adminController.isAdminloggedin ? homeRoute : authPageRoute,
         unknownRoute: GetPage(
           name: '/not-found',
           page: () => const NotFoundPage(),
           transition: Transition.fadeIn,
-          transitionDuration: const Duration(milliseconds: 3000),
+          transitionDuration: const Duration(
+            milliseconds: 3000,
+          ),
         ),
         // get all pages
         getPages: [
           GetPage(
             name: rootRoute,
-            page: () {
-              return const SiteLayout();
-            },
+            page: () => const SiteLayout(),
           ),
           GetPage(
             name: authPageRoute,
