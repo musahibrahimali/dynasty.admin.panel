@@ -1,4 +1,4 @@
-import 'package:dynasty_urban_style/pages/onboard/onboard.dart';
+import 'package:dynasty_urban_style/index.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {

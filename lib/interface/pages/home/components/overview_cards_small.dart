@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:dynasty_urban_style/pages/home/widgets/widgets.dart';
+import 'package:dynasty_urban_style/index.dart';
 
 class OverviewCardsSmallScreen extends StatelessWidget {
   const OverviewCardsSmallScreen({Key? key}) : super(key: key);

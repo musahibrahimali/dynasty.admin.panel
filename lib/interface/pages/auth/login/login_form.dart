@@ -135,14 +135,15 @@ class _LoginFormState extends State<LoginForm> {
 
   // log in user
   _logInAdmin(email, password) async {
-    var userDetails = {
-      'email': email,
-      'password': password,
-    };
-    var _admin = await loginAdmin(userDetails);
-    if (_admin != null) {
-      // navigate to home page
-      Navigator.pushNamed(context, homeRoute);
-    }
+    // Map<String, dynamic> userDetails = {
+    //   'email': email,
+    //   'password': password,
+    // };
+    // dynamic _admin = await loginAdmin(userDetails);
+    // if (_admin != null) {
+    //   // navigate to home page
+    //   Navigator.pushNamed(context, homeRoute);
+    // }
+    Navigator.pushNamed(context, homeRoute);
   }
 }

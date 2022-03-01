@@ -1,17 +1,22 @@
 import 'package:dynasty_urban_style/index.dart';
-import 'package:dynasty_urban_style/pages/home/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class RevenueSectionSmall extends StatelessWidget {
-  const RevenueSectionSmall({Key? key}) : super(key: key);
+class RevenueSectionLarge extends StatelessWidget {
+  const RevenueSectionLarge({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Obx(
       () => Container(
-        padding: const EdgeInsets.all(24.0),
-        margin: const EdgeInsets.symmetric(vertical: 30.0),
+        padding: const EdgeInsets.symmetric(
+          horizontal: 24.0,
+          vertical: 24.0,
+        ),
+        margin: const EdgeInsets.symmetric(
+          vertical: 30.0,
+          horizontal: 10.0,
+        ),
         decoration: BoxDecoration(
           color: themeController.isLightTheme ? BrandColors.kColorBackground : BrandColors.kWhiteGray,
           borderRadius: BorderRadius.circular(8.0),
@@ -23,14 +28,13 @@ class RevenueSectionSmall extends StatelessWidget {
             )
           ],
           border: Border.all(
-            color: BrandColors.kLightGray,
+            color: BrandColors.kWhiteGray,
             width: 0.5,
           ),
         ),
-        child: Column(
+        child: Row(
           children: [
-            SizedBox(
-              height: 260.0,
+            Expanded(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -49,12 +53,11 @@ class RevenueSectionSmall extends StatelessWidget {
               ),
             ),
             Container(
-              width: 120.0,
-              height: 1.0,
-              color: BrandColors.kLightGray,
+              width: 1.0,
+              height: 120.0,
+              color: themeController.isLightTheme ? BrandColors.kWhiteGray : BrandColors.kColorDefaultDivider,
             ),
-            SizedBox(
-              height: 260.0,
+            Expanded(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -70,6 +73,7 @@ class RevenueSectionSmall extends StatelessWidget {
                       ),
                     ],
                   ),
+                  const SizedBox(height: 30.0),
                   Row(
                     children: const [
                       RevenueInfo(

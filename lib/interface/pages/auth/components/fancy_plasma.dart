@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:supercharged/supercharged.dart';
 import 'package:simple_animations/simple_animations.dart';
-import 'package:dynasty_urban_style/pages/auth/auth.dart';
+import 'package:dynasty_urban_style/index.dart';
 
 class FancyPlasma extends StatelessWidget {
   const FancyPlasma({Key? key}) : super(key: key);

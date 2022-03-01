@@ -8,3 +8,4 @@ export './products/products_page.dart';
 export './profile/profile_page.dart';
 export './users/users_page.dart';
 export './onboard/onboard.dart';
+export './home/home.dart';

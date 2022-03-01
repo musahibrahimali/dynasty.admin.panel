@@ -1,4 +1,4 @@
-import 'package:dynasty_urban_style/pages/home/widgets/widgets.dart';
+import 'package:dynasty_urban_style/index.dart';
 import 'package:flutter/material.dart';
 
 class OverviewCardsMediumScreen extends StatelessWidget {
